@@ -10,4 +10,4 @@ phases:
 artifacts:
   files:
     - '**/*'
-  base-directory: dist/frontend/browser/  # Directory with output files (e.g., React app)
+  base-directory: dist/frontend  # Directory with output files (e.g., React app)
