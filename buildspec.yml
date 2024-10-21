@@ -1,0 +1,16 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 14  # Adjust to your Node.js version
+    commands:
+      - npm install
+
+  build:
+    commands:
+      - npm run build -- --prod  # Change this to your build command
+
+artifacts:
+  files:
+    - dist/**/*  # Adjust this path to your build output directory
