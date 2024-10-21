@@ -1,0 +1,113 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+a{
+    text-decoration: none !important
+}
+body{
+    margin:0px;padding:0px;
+}
+.imgCont{
+  overflow:hidden;
+  width:100%;
+  height:200px;
+}
+h4{
+  color:black !important;
+}
+.imgCont img{
+  width:100%;
+}
+.titleCont{
+  height:70px;
+}
+.pg-content{
+    text-align: center;
+    height:calc(100% - 140px);
+    width:100%;
+}
+.logo-area{
+  font-weight:bold;
+  color:white;
+  font-size:2.5rem;
+}
+nav{
+    height:80px;
+    background-color:#222020;
+    padding:5px;
+    width:100%;
+}
+footer{
+    height:70px;
+    background-color:rgb(44, 43, 43);
+    padding:15px;
+    width:100%;
+    position:relative;
+}
+.delSpan{
+  position:absolute;
+  right:2px;top:2px;
+  font-size:20px;    
+  color: #ffffff;
+  cursor: pointer;
+  background-color: #969696;
+}
+.delSpan:hover{
+  background-color: rgba(7, 7, 43, 0.345);
+}
+.top-nav{
+    list-style: none;
+}
+.top-nav li{
+    float:left;display:inline-block;padding:15px;text-align:center;
+    color:#222020;font-weight:bold;
+    background-color:rgb(255 255 255);
+}
+.top-nav a{
+    color:#222020;
+}
+.top-nav li:hover, .top-nav li.active{
+    background-color:rgb(156 30 70);
+}
+.top-nav li:hover > a{
+    color:white !important;
+}
+
+
+/* Custom CSS styles */
+.trip-box {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 20px;
+    min-height: 200px; /* Adjust height as needed */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+   
+  }
+
+.trip-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.attraction-list{
+  list-style: none;
+}
+.attraction-list li{
+  position:relative;
+  padding:7px;background-color:rgb(227, 227, 227);
+  padding-right:25px;
+  border-radius: 2px;
+  min-width:200px;float:left;margin-left:7px;
+}
+.container{
+  min-height:400px;
+}
+.content-box{    
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: #7a7a7a 5px 14px 18px;
+}

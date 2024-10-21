@@ -1,0 +1,25 @@
+<div class="container" >
+    <div class="row"><div class="mx-auto mt-5 mb-5 content-box" style="text-align:left;max-width:700px;" >
+        <form #registerForm="ngForm" [noValidate]="false" (ngSubmit)="submitForm(registerForm)" >
+            <div class="row">
+                <div class="col-12 mb-5 text-center"><h1>Signup</h1></div>
+                <div class="col-12" *ngIf="message"><div class="alert {{alertType}}" >{{message}}</div></div>
+                <div class="col-12 col-md-6 mt-3 " >
+                    <input type="text" name="name" id="name" required="required" class="form-control" placeholder="Full Name" [(ngModel)]="user.name">
+                </div>
+                <div class="col-12 col-md-6 mt-3 " >
+                    <input type="text" name="username" id="username" required="required" class="form-control" placeholder="Email" [(ngModel)]="user.username">
+                </div>
+                <div class="col-12 col-md-6 mt-3 " >
+                    <input type="password" name="password" id="password" required="required" class="form-control" placeholder="Password" [(ngModel)]="user.password">
+                </div>
+                <div class="col-12 col-md-6 mt-3 " >
+                    <input type="file" name="profileImage" id="profileImage" required="required" class="form-control" placeholder="Profile Image" [(ngModel)]="user.profileImage"  (change)="onFileSelected($event)">
+                </div>
+                <div class="col-12 mt-3 mb-4 text-center" >
+                    <button type="submit" class="btn btn-primary" >Signup <span class="spinner-border spinner-border-sm" style="font-size:10px !important;" *ngIf="showLoader" role="status"></span></button>
+                </div>
+            </div>
+        </form>
+    </div></div>
+</div>

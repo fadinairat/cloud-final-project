@@ -1,0 +1,22 @@
+<div class="container"><div class="row"><div class="col-12 text-left">
+    <div class="mx-auto text-left mt-5 mb-5 content-box" style="max-width:500px; text-align: left !important;" >
+        <h1>Login <i class="bi bi-door-open"></i></h1><br>
+        <form #loginForm="ngForm" (ngSubmit)="doLogin(loginForm)">
+            <div class="row mb-3" *ngIf="showMessage" ><div class="col-12 text-center"><div class="alert {{alertType}}" >{{message}}</div></div></div>
+            <div class="row mb-3">
+                <div class="col-12"><b>Email:</b><br>
+                    <input type="text" class="form-control" name="username" id="username" [(ngModel)]="username" />
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-12"><b>Password:</b><br>
+                    <input type="password" class="form-control" name="password" id="password" [(ngModel)]="password" />
+                </div>
+            </div>
+            <div class="row text-center mb-5">
+                <div class="col-12"><button type="submit" class="btn btn-primary" >Login <span class="spinner-border spinner-border-sm" style="font-size:10px !important;" *ngIf="showLoader" role="status"></span></button> </div>
+            </div>
+
+        </form>
+    </div>
+</div></div></div>

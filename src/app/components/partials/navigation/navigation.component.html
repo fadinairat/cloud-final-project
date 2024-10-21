@@ -1,0 +1,18 @@
+<nav>
+    <div class="container" >
+        <div class="row">
+            <div class="text-start col-12 col-sm-6" >
+                <ul class="top-nav">
+                    <li ><a [routerLink]="['/home']" routerLinkActive="router-link-active" >HOME</a></li>                   
+                    <li *ngIf="showLogin" ><a routerLink="/register">SIGNUP</a></li>
+                    <li *ngIf="!showLogin" ><a routerLink="/profile">PROFILE</a></li>
+                    <li *ngIf="showLogin" ><a (click)="goLogin()" style="cursor:pointer">LOGIN <i class="bi bi-door-open"></i></a></li>
+                    <li *ngIf="!showLogin" ><a (click)="doLogout()" style="cursor:pointer">LOGOUT <i class="bi bi-box-arrow-right"></i></a></li>
+                </ul>
+            </div>
+            <div class="text-end col-12 col-sm-6 logo-area" >
+                Cloud Computing Project
+            </div>
+        </div>
+    </div>
+</nav>

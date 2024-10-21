@@ -1,0 +1,25 @@
+<div class="container" >
+    <div class="row"><div class="col-12 mt-5" ><h1>My Profile</h1></div></div>
+    <div class="row">
+        <div class="col-12" *ngIf="message"><div class="alert {{alertType}}" >{{message}}</div></div>
+        <div class="col-12 mt-5">
+            <h3><b>Name:</b> <span>{{user.name}}</span></h3><br>
+            <h3><b>Email:</b> <span>{{user.username}}</span></h3><br>
+        </div>
+    </div>
+    <div class="row"><div class="mx-auto mt-5 mb-5 content-box" style="text-align:left;max-width:700px;" >
+        <form #registerForm="ngForm" [noValidate]="false" (ngSubmit)="submitForm(registerForm)" >
+            <div class="row">                
+                <div class="col-12 col-md-8 mt-3 " >
+                    <input type="file" name="profileImage" id="profileImage" required="required" class="form-control" placeholder="Profile Image" (ngModel)="user.profileImage" (change)="onFileSelected($event)">
+                </div>
+                <div class="col-12 col-md-4 mt-3 " >
+                    <img src="{{img}}" *ngIf="img" style="width:200px;">
+                </div>
+                <div class="col-12 mt-3 mb-4 text-center" >
+                    <button type="submit" class="btn btn-primary" >Update Profile Picture</button>
+                </div>
+            </div>
+        </form>
+    </div></div>
+</div>
