@@ -9,4 +9,5 @@ phases:
       - npm run build  # Builds the project
 artifacts:
   files:
-    - 'dist/frontend/browser/**/*'
+    - '**/*'
+  base-directory: dist/frontend/browser  # Directory with output files (e.g., React app)
